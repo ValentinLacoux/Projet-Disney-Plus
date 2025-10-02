@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'InspireTWDC';
+  src: url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff2') format('woff2'),
+       url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#hero {
+  background-image: url("../img/original_2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  min-height: 100vh;            
+  display: flex;
+  align-items: center;          
+  justify-content: center;      
+  color: white;                 
+  text-align: center;
+  padding: 5.5% 0;
+}
+
+.texte {
+  font-family: "InspireTWDC";
+  font-weight: 600;
+  width: 70%;
+  margin-top: 175px;
+}
+
+h1 {
+  line-height: 42px;
+  font-size: 38px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 15px 0px;
+}
+
+
+p {
+  color: silver;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 13px;
+}
+
+nav {
+  position: absolute;
+  top: 0.5%;
+  right: 2.5%;
+  display: flex;
+  background: transparent;
+  z-index: 1000;
+  color: white;
+  font-family: "InspireTWDC";
+}
+
+input {
+  background-color: #31343E;
+  width: 40%;
+}
+
+form {
+  margin: 20px 0;
+}
+
+#identification {
+  border: 0.5px solid white;
+  padding: 10px 17px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: black;
+}
+
+#btn-inscription {
+  width:15%;
+  height:35px;
+  border: 0 solid ;
+  border-radius: 0px 2px 2px 0px;
+  background-color: #05D6E8;
+}
+
+#adresse-e-mail {
+  position: relative;
+  top: 0.5px;
+  width: 35%;
+  height:35px;
+  border: 0px solid ;
+  box-sizing: border-box; 
+  border-radius: 2px 0px 0px 2px;
+  margin: -5px;
+  padding-left: 10px;
+  color: silver;
+}
+
+#adresse-e-mail:focus {
+  border: 0.5px solid silver;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#fleche {
+  position: absolute;
+  width: 15px;
+  height: auto;
+  bottom: -90px;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(7496%) hue-rotate(85deg) brightness(94%) contrast(94%);
+  transform: rotate(-90deg);
+  animation: rebond 2s infinite;
+}
+
+#fleche:hover {
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+#p2 {
+  font-size: 16px;
+}
+
+#p3 {
+  font-size: 11px;
+}
+
+@keyframes rebond {
+  0%  {transform: rotate(-90deg) translateX(0);}
+  25% {transform: rotate(-90deg) translateX(-15px);}
+  40% {transform: rotate(-90deg) translateX(-7px);}
+  65% {transform: rotate(-90deg) translateX(-15px);}
+  80% {transform: rotate(-90deg) translateX(-15px);}
+}

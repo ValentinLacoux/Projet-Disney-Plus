@@ -4,20 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/x-icon" href="../img/favicon-v2.ico">
   <title>Page d'accueil Disney+</title>
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <nav>
+      <ul type="none">
+        <li>
+          <span id="identification">S'IDENTIFIER</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <div class="hero">
-      <h1>Nouvelles productions originales, grands films, séries cultes et encore + en streaming</h1>
-      <h3>Sans coût additionnel.Sans engagement.*</h3>
-      <p>Entrez votre adresse e-mail pour commencer ou réactiver votre abonnement.</p>
-    </div>
+    <section id="hero">
+      <div class="texte">
+        <h1>Nouvelles productions originales, grands films, séries cultes et encore + en streaming</h1>
+        <h4>Sans coût additionnel. Sans engagement.*</h3>
+          <p>Entrez votre adresse e-mail pour commencer ou réactiver votre abonnement.</p>
+          <form action="">
+            <input type="email" id="adresse-e-mail" placeholder="Adresse e-mail">
+            <button id="btn-inscription">S'INSCRIRE</button>
+          </form>
+          <p id="p2">Profitez de 12 mois au prix de 10 avec un abonnement Premium ou Standard annuel. Économies par
+            rapport à un an d'abonnement mensuel.</p>
+          <p id="p3">* La résiliation prend effet à la fin de la période d'abonnement en cours. Abonnement
+            requis.<br><i>Becoming Karl Lagerfeld</i> en streaming dès le 7 juin.</p>
+          <img id="fleche" src="../img/logo-signe-mathematique.svg" alt="fleche">
+      </div>
+    </section>
   </main>
   <footer></footer>
 </body>

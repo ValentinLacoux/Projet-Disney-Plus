@@ -75,7 +75,7 @@ form {
 }
 
 #btn-inscription {
-  width:15%;
+  width:160px;
   height:35px;
   border: 0 solid ;
   border-radius: 0px 2px 2px 0px;
@@ -85,7 +85,7 @@ form {
 #adresse-e-mail {
   position: relative;
   top: 0.5px;
-  width: 35%;
+  width: 350px;
   height:35px;
   border: 0px solid ;
   box-sizing: border-box; 
@@ -116,11 +116,11 @@ form {
   filter: brightness(0) invert(1);
 }
 
-#p2 {
+.p2 {
   font-size: 16px;
 }
 
-#p3 {
+.p3 {
   font-size: 11px;
 }
 
@@ -130,4 +130,26 @@ form {
   40% {transform: rotate(-90deg) translateX(-7px);}
   65% {transform: rotate(-90deg) translateX(-15px);}
   80% {transform: rotate(-90deg) translateX(-15px);}
+}
+
+#oeuvre-originale {
+  min-height: 100vh; /* prend toute la hauteur de l'écran */
+  background-image: url("../img/original_4.jpeg");
+  background-size: cover;       /* recouvre toute la div */
+  background-position: center;  /* centre l'image */
+  background-repeat: no-repeat;/* évite la répétition */
+
+  display: flex;                /* pour centrer le texte */
+  flex-direction: column;     /* horizontalement centré */
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-left: 3%;
+  color: white;                 /* texte lisible sur fond */
+  font-family: "InspireTWDC";
+  font-weight: 600;
+}
+
+#seulement-sur-disney {
+  transform: translateY(-70px);
 }

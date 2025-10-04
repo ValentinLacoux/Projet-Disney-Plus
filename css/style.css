@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #hero {
   background-image: url("../img/original_2.jpeg");
   background-size: cover;
@@ -152,4 +156,9 @@ form {
 
 #seulement-sur-disney {
   transform: translateY(-70px);
+}
+
+#abonnement {
+  min-height: 100vh;
+  background-color: #050714;
 }

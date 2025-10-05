@@ -161,7 +161,7 @@ form {
   transform: translateY(-70px);
 }
 
-#abonnement, #envie, #questions-frequentes{
+#abonnement, #envie, #questions-frequentes, #accessibilite{
   min-height: 100vh;
   background-color: #050714;
   background-size: cover;
@@ -266,4 +266,67 @@ thead tr :nth-child(3) p {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+}
+
+/* SECTION Questions fréquentes */
+.reponse {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #13151D;
+  color: silver;
+  width: 1200px;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 0.75em;
+  text-align: left;
+}
+
+.reponse.open {
+  padding: 0 1em;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #13151D;
+  color: white;
+  width: 1200px;
+  max-width: 100%;
+  border: none;
+  padding: 0.75em;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.icone {
+  text-align: right;
+  font-weight: bold;
+  font-size: 35px
+}
+
+.faq {
+  padding: 5px
+}
+
+li {
+  font-size: 16px;
+}
+
+.reponse u {
+  color: white;
+}
+
+.reponse u:hover {
+  cursor: pointer;
+}
+
+ol li {
+  text-indent: 0.75em;
+}
+
+#accessibilite {
+  display: flex;
+  flex-direction: column;
 }

@@ -161,7 +161,7 @@ form {
   transform: translateY(-70px);
 }
 
-#abonnement, #envie{
+#abonnement, #envie, #questions-frequentes{
   min-height: 100vh;
   background-color: #050714;
   background-size: cover;

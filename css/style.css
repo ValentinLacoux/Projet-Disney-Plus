@@ -161,7 +161,7 @@ form {
   transform: translateY(-70px);
 }
 
-#abonnement {
+#abonnement, #envie{
   min-height: 100vh;
   background-color: #050714;
   background-size: cover;
@@ -191,11 +191,13 @@ tr {
 }
 #abonnement h2 {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 table {
   border-collapse: collapse;
 }
+
 th,td{
   border-bottom: 1px solid #31343E;
 }
@@ -232,4 +234,36 @@ thead tr :nth-child(3) p {
 #abonnement .p3 {
   margin: auto 0;
   width:1100px;
+}
+
+#envie {
+  min-height: 150vh;
+  background-image: url("../img/original.jpeg");
+  background-size: 80%;
+}
+
+#envie h2 {
+  padding-top: 80px;
+  padding-bottom: -10px;
+}
+
+#avantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  text-align: center;
+  padding-top: 550px;
+}
+
+#avantages img {  
+  width: 100px;
+}
+
+#avantages div {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }

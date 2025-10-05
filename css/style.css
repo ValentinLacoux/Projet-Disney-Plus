@@ -329,4 +329,54 @@ ol li {
 #accessibilite {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#appareils {
+  display: flex;
+  flex-wrap: wrap;           /* permet le retour à la ligne si écran trop petit */
+  justify-content: center;   /* centre horizontalement */
+  gap: 20px;                 /* espace entre les appareils */
+  width: 100%;
+  max-width: 1200px;         /* largeur max de la section */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.appareil {
+  flex: 1 1 0;               /* tous les blocs prennent le même espace disponible */
+  max-width: 250px;          /* limite la largeur de chaque bloc */
+  min-width: 200px;          /* largeur minimale pour ne pas être trop petit */
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#appareils {
+  align-items: stretch;      /* force tous les enfants à prendre la même hauteur */
+}
+
+#appareils img {
+  width: 400px;
+}
+
+#appareils p {
+  margin: 1px;
+}
+
+footer {
+  background-color: #050714;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }

@@ -1,382 +1,560 @@
+/* ========================================================================= */
+/* 1. STYLES GLOBAUX & TYPOGRAPHIE */
+/* ========================================================================= */
+
+/* Déclaration de la police de caractères personnalisée 'InspireTWDC' */
 @font-face {
-  font-family: 'InspireTWDC';
-  src: url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff2') format('woff2'),
-       url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+font-family: 'InspireTWDC';
+src: url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff2') format('woff2'),
+url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff') format('woff');
+font-weight: normal;
+font-style: normal;
 }
 
+/* Configuration du comportement de défilement pour une navigation douce */
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
+/* Styles par défaut du corps de la page */
 body {
-  font-family: "InspireTWDC";
-  font-weight: 600;
-}
-#hero {
-  background-image: url("../img/original_2.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; 
-  min-height: 100vh;            
-  display: flex;
-  align-items: center;          
-  justify-content: center;      
-  color: white;                 
-  text-align: center;
-  padding: 5.5% 0;
+font-family: "InspireTWDC";
+font-weight: 600;
 }
 
-.texte {
-  font-family: "InspireTWDC";
-  font-weight: 600;
-  width: 70%;
-  margin-top: 175px;
-}
-
+/* Styles des titres H1, H4, P */
 h1 {
-  line-height: 42px;
-  font-size: 38px;
-  margin-bottom: 0px;
+line-height: 42px;
+font-size: 38px;
+margin-bottom: 0;
 }
 
 h4 {
-  font-size: 20px;
-  margin: 15px 0px;
+font-size: 20px;
+margin: 15px 0;
 }
-
 
 p {
-  color: silver;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 13px;
+color: silver;
+font-weight: 400;
+line-height: 1.4;
+font-size: 13px;
 }
 
-nav {
-  position: absolute;
-  top: 0.5%;
-  right: 2.5%;
-  display: flex;
-  background: transparent;
-  z-index: 1000;
-  color: white;
-  font-family: "InspireTWDC";
-}
-
-input {
-  background-color: #31343E;
-  width: 40%;
-}
-
-form {
-  margin: 20px 0;
-}
-
-#identification {
-  border: 0.5px solid white;
-  padding: 10px 17px;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: black;
-}
-
-#btn-inscription {
-  width:160px;
-  height:35px;
-  border: 0 solid ;
-  border-radius: 0px 2px 2px 0px;
-  background-color: #05D6E8;
-}
-
-#adresse-e-mail {
-  position: relative;
-  top: 0.5px;
-  width: 350px;
-  height:35px;
-  border: 0px solid ;
-  box-sizing: border-box; 
-  border-radius: 2px 0px 0px 2px;
-  margin: -5px;
-  padding-left: 10px;
-  color: silver;
-}
-
-#adresse-e-mail:focus {
-  border: 0.5px solid silver;
-  outline: none;
-  box-sizing: border-box;
-}
-
-#fleche {
-  position: absolute;
-  width: 30px;
-  height: auto;
-  bottom: -90px;
-  filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(7496%) hue-rotate(85deg) brightness(94%) contrast(94%);
-  animation: rebond 2s infinite;
-}
-
-#fleche:hover {
-  cursor: pointer;
-  filter: brightness(0) invert(1);
-}
-
+/* Surcharge de la taille de police pour les classes utilitaires de texte */
 .p2 {
-  font-size: 16px;
+font-size: 16px;
 }
 
 .p3 {
-  font-size: 11px;
+font-size: 11px;
 }
 
-@keyframes rebond {
-  0%  {transform: translateY(0);}
-  25% {transform: translateY(-15px);}
-  40% {transform: translateY(-7px);}
-  65% {transform: translateY(-15px);}
-  80% {transform: translateY(-15px);}
+/* Styles pour les listes (utilisé dans la FAQ/Footer) */
+li {
+font-size: 16px;
 }
+
+/* ========================================================================= */
+/* 2. HEADER & NAVIGATION */
+/* ========================================================================= */
+
+/* Positionnement de la barre de navigation */
+nav {
+position: absolute;
+top: 0.5%;
+right: 2.5%;
+display: flex;
+background: transparent;
+z-index: 1000;
+color: white;
+font-family: "InspireTWDC";
+}
+
+/* Bouton S'IDENTIFIER */
+#identification {
+border: 0.5px solid white;
+padding: 10px 17px;
+border-radius: 4px;
+cursor: pointer;
+background-color: black;
+}
+
+/* ========================================================================= */
+/* 3. SECTION HERO (Bannière principale) */
+/* ========================================================================= */
+
+#hero {
+/* Image de fond et positionnement */
+background-image: url("../img/original_2.jpeg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+min-height: 100vh;
+
+/* Centrage du contenu */
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+/* Style du contenu */
+color: white;
+padding: 5.5% 0;
+}
+
+.texte {
+font-family: "InspireTWDC";
+font-weight: 600;
+width: 70%;
+margin-top: 175px;
+}
+
+/* Formulaire d'inscription */
+form {
+margin: 20px 0;
+}
+
+#adresse-e-mail {
+/* Positionnement et dimensionnement */
+position: relative;
+top: 0.5px;
+width: 350px;
+height: 35px;
+
+/* Style et alignement */
+background-color: #31343E;
+border: 0 solid;
+box-sizing: border-box;
+border-radius: 2px 0 0 2px;
+margin: -5px;
+padding-left: 10px;
+color: silver;
+}
+
+/* Focus de l'input email */
+#adresse-e-mail:focus {
+border: 0.5px solid silver;
+outline: none;
+box-sizing: border-box;
+}
+
+#btn-inscription {
+width: 160px;
+height: 35px;
+border: 0 solid;
+border-radius: 0 2px 2px 0;
+background-color: #05D6E8;
+}
+
+/* Hover du bouton S'INSCRIRE */
+#btn-inscription:hover {
+background-color: #00ACC1;
+cursor: pointer;
+}
+
+/* Icône flèche animée */
+#fleche {
+position: absolute;
+width: 30px;
+height: auto;
+bottom: -90px;
+/* Filtre pour la couleur (Blanc/Cyan - ajusté pour une meilleure lisibilité) */
+filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(7496%) hue-rotate(85deg) brightness(94%) contrast(94%);
+animation: rebond 2s infinite;
+}
+
+#fleche:hover {
+cursor: pointer;
+filter: brightness(0) invert(1); /* Devient blanc pur au survol */
+}
+
+/* Animation du rebond de la flèche */
+@keyframes rebond {
+0%, 80% { transform: translateY(0); } /* Début, fin et pause */
+25%, 65% { transform: translateY(-15px); } /* Point le plus haut */
+40% { transform: translateY(-7px); } /* Rebond intermédiaire */
+}
+
+/* ========================================================================= */
+/* 4. SECTION OEUVRE ORIGINALE */
+/* ========================================================================= */
 
 #oeuvre-originale {
-  min-height: 100vh; /* prend toute la hauteur de l'écran */
-  background-image: url("../img/original_4.jpeg");
-  background-size: cover;       /* recouvre toute la div */
-  background-position: center;  /* centre l'image */
-  background-repeat: no-repeat;/* évite la répétition */
+/* Image de fond et positionnement */
+min-height: 100vh;
+background-image: url("../img/original_4.jpeg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 
-  display: flex;                /* pour centrer le texte */
-  flex-direction: column;     /* horizontalement centré */
-  justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
-  padding-left: 3%;
-  color: white;                 /* texte lisible sur fond */
-  font-family: "InspireTWDC";
-  font-weight: 600;
+/* Alignement du contenu */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+box-sizing: border-box;
+padding-left: 3%;
+
+/* Style du contenu */
+color: white;
+font-family: "InspireTWDC";
+font-weight: 600;
 }
 
 #seulement-sur-disney {
-  transform: translateY(-70px);
+transform: translateY(-70px); /* Décalage vers le haut */
 }
 
+/* ========================================================================= */
+/* 5. SECTIONS GÉNÉRIQUES (ABONNEMENT, ENVIE, FAQ, ACCESSIBILITÉ) */
+/* ========================================================================= */
+
 #abonnement, #envie, #questions-frequentes, #accessibilite{
-  min-height: 100vh;
-  background-color: #050714;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  color: white;
+/* Fond commun */
+background-color: #050714;
+/* Mise en page Flexbox */
+display: flex;
+flex-direction: column;
+align-items: center;
+box-sizing: border-box;
+color: white;
+}
+
+#abonnement, #questions-frequentes, #accessibilite {
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+/* TABLEAU DES ABONNEMENTS */
+#abonnement h2 {
+text-align: center;
+margin-bottom: 40px;
 }
 
 table {
-  margin: 0 auto;
-  width: 1100px;
+margin: 0 auto;
+width: 1100px;
+border-collapse: collapse;
 }
 
-th {
-  text-align: left;
+th, td {
+text-align: left;
+border-bottom: 1px solid #31343E;
 }
+
 td {
-  text-align: center;
+text-align: center;
 }
 
 tr {
-  height: 70px;
-}
-#abonnement h2 {
-  text-align: center;
-  margin-bottom: 40px;
+height: 70px;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-th,td{
-  border-bottom: 1px solid #31343E;
-}
-
-table tr th:last-child,
-table tr td:last-child {
-  background-color: #1D1F2B;
+/* Styles pour les colonnes Standard et Premium */
+table tr td:last-child,
+table tr th:last-child {
+background-color: #1D1F2B;
 }
 
 table tr td:last-child p,
-table tr th:last-child p {
-  color: white;
-}
-
+table tr th:last-child p,
 thead tr :nth-child(3) p {
-  color: white;
+color: white;
 }
 
+/* Styles pour les images de coches/traits */
 .coche, .trait {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px;
-  margin: auto;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 18px;
+margin: auto;
 }
 
 .coche {
-  background-image: url("../img/logo-valide-blanc.svg");
+background-image: url("../img/logo-valide-blanc.svg");
 }
 
 .trait {
-  background-image: url("../img/original_1.svg");
+background-image: url("../img/original_1.svg");
 }
 
+/* Texte des petits caractères sous le tableau */
 #abonnement .p3 {
-  margin: auto 0;
-  width:1100px;
+margin: auto 0;
+width: 1100px;
 }
 
+/* SECTION REGARDEZ SELON VOS ENVIES */
 #envie {
-  min-height: 150vh;
-  background-image: url("../img/original.jpeg");
-  background-size: 80%;
+min-height: 150vh;
+background-image: url("../img/original.jpeg");
+background-size: 80%;
+background-position: center; /* <-- CORRECTION ICI */
+background-repeat: no-repeat;
 }
 
 #envie h2 {
-  padding-top: 80px;
-  padding-bottom: -10px;
+padding-top: 80px;
+padding-bottom: -10px;
 }
 
 #avantages {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
-  text-align: center;
-  padding-top: 550px;
-}
-
-#avantages img {  
-  width: 100px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: stretch;
+text-align: center;
+padding-top: 550px;
 }
 
 #avantages div {
-  flex: 1;
-  margin: 10px;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
+flex: 1;
+margin: 10px;
+padding: 20px;
+box-sizing: border-box;
+text-align: center;
+flex: 1;
 }
 
-/* SECTION Questions fréquentes */
-.reponse {
-  max-height: 0;
-  overflow: hidden;
-  background-color: #13151D;
-  color: silver;
-  width: 1200px;
-  max-width: 100%;
-  box-sizing: border-box;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 0.75em;
-  text-align: left;
+#avantages img {
+width: 100px;
 }
 
-.reponse.open {
-  padding: 0 1em;
+/* SECTION QUESTIONS FRÉQUENTES (FAQ) */
+.faq {
+padding: 5px;
 }
 
 .question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #13151D;
-  color: white;
-  width: 1200px;
-  max-width: 100%;
-  border: none;
-  padding: 0.75em;
-  cursor: pointer;
-  box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #13151D;
+color: white;
+width: 1200px;
+max-width: 100%;
+border: none;
+padding: 0.75em;
+cursor: pointer;
+box-sizing: border-box;
+}
+
+.reponse {
+max-height: 0;
+overflow: hidden;
+background-color: #13151D;
+color: silver;
+width: 1200px;
+max-width: 100%;
+box-sizing: border-box;
+transition: max-height 0.3s ease, padding 0.3s ease;
+padding: 0 0.75em;
+text-align: left;
+}
+
+.reponse.open {
+padding: 0 1em;
 }
 
 .icone {
-  text-align: right;
-  font-weight: bold;
-  font-size: 35px
+text-align: right;
+font-weight: bold;
+font-size: 35px;
 }
 
-.faq {
-  padding: 5px
-}
-
-li {
-  font-size: 16px;
-}
-
+/* Styles spécifiques au contenu de la réponse (FAQ) */
 .reponse u {
-  color: white;
+color: white;
 }
 
 .reponse u:hover {
-  cursor: pointer;
+cursor: pointer;
 }
 
 ol li {
-  text-indent: 0.75em;
+text-indent: 0.75em;
 }
 
+/* SECTION ACCESSIBILITÉ */
 #accessibilite {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
+width: 100%;
 }
 
 #appareils {
-  display: flex;
-  flex-wrap: wrap;           /* permet le retour à la ligne si écran trop petit */
-  justify-content: center;   /* centre horizontalement */
-  gap: 20px;                 /* espace entre les appareils */
-  width: 100%;
-  max-width: 1200px;         /* largeur max de la section */
-  margin: 0 auto;
-  box-sizing: border-box;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: stretch;
+gap: 20px;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+box-sizing: border-box;
 }
 
 .appareil {
-  flex: 1 1 0;               /* tous les blocs prennent le même espace disponible */
-  max-width: 250px;          /* limite la largeur de chaque bloc */
-  min-width: 200px;          /* largeur minimale pour ne pas être trop petit */
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#appareils {
-  align-items: stretch;      /* force tous les enfants à prendre la même hauteur */
+flex: 1 1 0;
+max-width: 250px;
+min-width: 200px;
+padding: 20px;
+box-sizing: border-box;
+border-radius: 10px;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 #appareils img {
-  width: 400px;
+width: 400px;
 }
 
 #appareils p {
-  margin: 1px;
+margin: 1px;
 }
 
+/* ========================================================================= */
+/* 6. FOOTER */
+/* ========================================================================= */
+
 footer {
-  background-color: #050714;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
+background-color: #050714;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+box-sizing: border-box;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+footer img {
+width: 100px;
+margin: 20px 0 10px 0;
+}
+
+#liens-footer {
+display: flex;
+flex-direction: column;
+}
+
+#liens-footer ul {
+display: flex;
+flex-direction: row;
+font-size: 16px;
+margin: 0;
+}
+
+#liens-footer li {
+color: silver;
+list-style-type: none;
+padding: 12px;
+}
+
+#liens-footer li a {
+color: silver;
+text-decoration: none;
+}
+
+#liens-footer li:hover,
+#liens-footer li a:hover {
+color: white;
+cursor: pointer;
+}
+
+/* Sélecteur de langue personnalisé (au-dessus des liens) */
+
+/* Conteneur principal du sélecteur */
+.language-selector-wrapper {
+position: relative;
+width: auto;
+display: inline-block;
+}
+
+/* Faux sélecteur (visible) */
+.custom-language-selector {
+/* Flexbox et positionnement */
+display: flex;
+align-items: center;
+height: 12px;
+bottom: 50px;
+
+/* Style visuel */
+padding: 8px 12px;
+background-color: transparent;
+color: #a7a7a9;
+font-size: 16px;
+border-radius: 4px;
+cursor: pointer;
+
+/* Bordure et transition */
+border: 1px solid transparent;
+transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Le texte "Français" */
+#selected-language {
+flex-grow: 1;
+color: silver;
+padding-right: 8px;
+transform: translateY(4px);
+font-size: 12px;
+transition: text-decoration 0.2s ease, color 0.2s ease;
+}
+
+/* Styles pour les icônes (globe et flèche) */
+.icone-gauche,
+.icone-droite {
+display: block;
+/* Filtre pour la couleur silver/gris par défaut */
+filter: invert(82%) sepia(0%) saturate(0%) brightness(95%);
+}
+
+.icone-gauche {
+width: 20px;
+height: 20px;
+margin-right: 8px;
+}
+
+.icone-droite {
+width: 16px;
+height: 16px;
+}
+
+/* Le vrai <select> (invisible) */
+.original-language-select {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+cursor: pointer;
+}
+
+.original-language-select option {
+font-size: 12px;
+}
+
+/* ÉTATS INTERACTIFS DU SÉLECTEUR DE LANGUE */
+
+/* 1. Survol (Hover) */
+.language-selector-wrapper:hover #selected-language {
+text-decoration: underline;
+color: white;
+}
+
+.language-selector-wrapper:hover .icone-gauche,
+.language-selector-wrapper:hover .icone-droite {
+/* Filtre pour rendre les icônes blanches (Noir -> Blanc) */
+filter: brightness(0) invert(1);
+}
+
+/* 2. Focus (lorsque le <select> est actif) */
+.language-selector-wrapper:focus-within .custom-language-selector {
+border-color: #f9f9f9;
 }

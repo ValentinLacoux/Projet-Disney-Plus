@@ -27,3 +27,21 @@ questions.forEach((btn) => {
     }
   });
 })
+
+
+
+// On récupère le span et le select
+const selectPersonnalise = document.querySelector('.select-personnalise');
+const selectLangue = document.querySelector('.select-langue');
+
+// Quand on clique sur le span, on déclenche le menu déroulant du select
+selectPersonnalise.addEventListener('click', () => {
+  selectLangue.focus();   // met le select en focus
+  selectLangue.click();   // ouvre le menu déroulant
+});
+
+// On peut aussi écouter le changement de valeur
+selectLangue.addEventListener('change', (event) => {
+  console.log("Langue choisie :", event.target.value);
+  // ici tu peux ajouter ton code pour changer la langue
+});

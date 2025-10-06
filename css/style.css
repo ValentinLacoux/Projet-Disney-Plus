@@ -1,560 +1,610 @@
 /* ========================================================================= */
-/* 1. STYLES GLOBAUX & TYPOGRAPHIE */
+/* 1. STYLES GLOBAUX & TYPOGRAPHIE (COMMUN À TOUS LES APPAREILS) */
 /* ========================================================================= */
 
 /* Déclaration de la police de caractères personnalisée 'InspireTWDC' */
 @font-face {
-font-family: 'InspireTWDC';
-src: url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff2') format('woff2'),
-url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff') format('woff');
-font-weight: normal;
-font-style: normal;
+    font-family: 'InspireTWDC';
+    src: url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff2') format('woff2'),
+         url('../fonts/130a63bec7d0efc605bbe6253a27de98.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Configuration du comportement de défilement pour une navigation douce */
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Styles par défaut du corps de la page */
 body {
-font-family: "InspireTWDC";
-font-weight: 600;
+    font-family: "InspireTWDC";
+    font-weight: 600;
 }
 
 /* Styles des titres H1, H4, P */
 h1 {
-line-height: 42px;
-font-size: 38px;
-margin-bottom: 0;
+    line-height: 42px;
+    font-size: 38px;
+    margin-bottom: 0;
 }
 
 h4 {
-font-size: 20px;
-margin: 15px 0;
+    font-size: 20px;
+    margin: 15px 0;
 }
 
 p {
-color: silver;
-font-weight: 400;
-line-height: 1.4;
-font-size: 13px;
+    color: silver;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 13px;
 }
 
 /* Surcharge de la taille de police pour les classes utilitaires de texte */
 .p2 {
-font-size: 16px;
+    font-size: 16px;
 }
 
 .p3 {
-font-size: 11px;
+    font-size: 11px;
 }
 
 /* Styles pour les listes (utilisé dans la FAQ/Footer) */
 li {
-font-size: 16px;
+    font-size: 16px;
 }
 
 /* ========================================================================= */
-/* 2. HEADER & NAVIGATION */
+/* 2. HEADER & NAVIGATION (COMMUN) */
 /* ========================================================================= */
 
 /* Positionnement de la barre de navigation */
 nav {
-position: absolute;
-top: 0.5%;
-right: 2.5%;
-display: flex;
-background: transparent;
-z-index: 1000;
-color: white;
-font-family: "InspireTWDC";
+    position: absolute;
+    top: 0.5%;
+    right: 2.5%;
+    display: flex;
+    background: transparent;
+    z-index: 1000;
+    color: white;
+    font-family: "InspireTWDC";
 }
 
 /* Bouton S'IDENTIFIER */
 #identification {
-border: 0.5px solid white;
-padding: 10px 17px;
-border-radius: 4px;
-cursor: pointer;
-background-color: black;
+    border: 0.5px solid white;
+    padding: 10px 17px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: black;
 }
 
 /* ========================================================================= */
-/* 3. SECTION HERO (Bannière principale) */
+/* 3. SECTION HERO (Bannière principale) (COMMUN) */
 /* ========================================================================= */
 
 #hero {
-/* Image de fond et positionnement */
-background-image: url("../img/original_2.jpeg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-min-height: 100vh;
+    /* Image de fond et positionnement */
+    background-image: url("../img/original_2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 
-/* Centrage du contenu */
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+    /* Centrage du contenu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-/* Style du contenu */
-color: white;
-padding: 5.5% 0;
+    /* Style du contenu */
+    color: white;
+    padding: 5.5% 0;
 }
 
-.texte {
-font-family: "InspireTWDC";
-font-weight: 600;
-width: 70%;
-margin-top: 175px;
-}
-
-/* Formulaire d'inscription */
+/* Formulaire d'inscription (COMMUN) */
 form {
-margin: 20px 0;
+    margin: 20px 0;
 }
 
+/* Styles généraux de l'input email */
 #adresse-e-mail {
-/* Positionnement et dimensionnement */
-position: relative;
-top: 0.5px;
-width: 350px;
-height: 35px;
-
-/* Style et alignement */
-background-color: #31343E;
-border: 0 solid;
-box-sizing: border-box;
-border-radius: 2px 0 0 2px;
-margin: -5px;
-padding-left: 10px;
-color: silver;
+    /* Styles de base déplacés du @media desktop */
+    position: relative;
+    top: 0.5px;
+    
+    /* Style et alignement */
+    background-color: #31343E;
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: -5px; /* Marge négative pour coller au bouton */
+    padding-left: 10px;
+    color: silver;
 }
 
-/* Focus de l'input email */
+/* Focus de l'input email (COMMUN) */
 #adresse-e-mail:focus {
-border: 0.5px solid silver;
-outline: none;
-box-sizing: border-box;
+    border: 0.5px solid silver;
+    outline: none;
+    box-sizing: border-box;
 }
 
+/* Bouton S'INSCRIRE (COMMUN) */
 #btn-inscription {
-width: 160px;
-height: 35px;
-border: 0 solid;
-border-radius: 0 2px 2px 0;
-background-color: #05D6E8;
+    border: 0 solid;
+    background-color: #05D6E8;
 }
 
-/* Hover du bouton S'INSCRIRE */
+/* Hover du bouton S'INSCRIRE (COMMUN) */
 #btn-inscription:hover {
-background-color: #00ACC1;
-cursor: pointer;
+    background-color: #00ACC1;
+    cursor: pointer;
 }
 
-/* Icône flèche animée */
+/* Icône flèche animée (COMMUN) */
 #fleche {
-position: absolute;
-width: 30px;
-height: auto;
-bottom: -90px;
-/* Filtre pour la couleur (Blanc/Cyan - ajusté pour une meilleure lisibilité) */
-filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(7496%) hue-rotate(85deg) brightness(94%) contrast(94%);
-animation: rebond 2s infinite;
+    position: absolute;
+    width: 30px;
+    height: auto;
+    bottom: -90px;
+    /* Filtre pour la couleur (Blanc/Cyan - ajusté pour une meilleure lisibilité) */
+    filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(7496%) hue-rotate(85deg) brightness(94%) contrast(94%);
+    animation: rebond 2s infinite;
 }
 
 #fleche:hover {
-cursor: pointer;
-filter: brightness(0) invert(1); /* Devient blanc pur au survol */
+    cursor: pointer;
+    filter: brightness(0) invert(1); /* Devient blanc pur au survol */
 }
 
-/* Animation du rebond de la flèche */
+/* Animation du rebond de la flèche (COMMUN) */
 @keyframes rebond {
-0%, 80% { transform: translateY(0); } /* Début, fin et pause */
-25%, 65% { transform: translateY(-15px); } /* Point le plus haut */
-40% { transform: translateY(-7px); } /* Rebond intermédiaire */
+    0%, 80% { transform: translateY(0); } /* Début, fin et pause */
+    25%, 65% { transform: translateY(-15px); } /* Point le plus haut */
+    40% { transform: translateY(-7px); } /* Rebond intermédiaire */
 }
 
 /* ========================================================================= */
-/* 4. SECTION OEUVRE ORIGINALE */
+/* 4. SECTION OEUVRE ORIGINALE (COMMUN) */
 /* ========================================================================= */
 
 #oeuvre-originale {
-/* Image de fond et positionnement */
-min-height: 100vh;
-background-image: url("../img/original_4.jpeg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    /* Image de fond et positionnement */
+    min-height: 100vh;
+    background-image: url("../img/original_4.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-/* Alignement du contenu */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-box-sizing: border-box;
-padding-left: 3%;
+    /* Alignement du contenu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-left: 3%;
 
-/* Style du contenu */
-color: white;
-font-family: "InspireTWDC";
-font-weight: 600;
+    /* Style du contenu */
+    color: white;
+    font-family: "InspireTWDC";
+    font-weight: 600;
 }
 
 #seulement-sur-disney {
-transform: translateY(-70px); /* Décalage vers le haut */
+    transform: translateY(-70px); /* Décalage vers le haut */
 }
 
 /* ========================================================================= */
-/* 5. SECTIONS GÉNÉRIQUES (ABONNEMENT, ENVIE, FAQ, ACCESSIBILITÉ) */
+/* 5. SECTIONS GÉNÉRIQUES (COMMUN) */
 /* ========================================================================= */
 
 #abonnement, #envie, #questions-frequentes, #accessibilite{
-/* Fond commun */
-background-color: #050714;
-/* Mise en page Flexbox */
-display: flex;
-flex-direction: column;
-align-items: center;
-box-sizing: border-box;
-color: white;
+    /* Fond commun */
+    background-color: #050714;
+    /* Mise en page Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    color: white;
 }
 
 #abonnement, #questions-frequentes, #accessibilite {
-min-height: 100vh;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* TABLEAU DES ABONNEMENTS */
+/* TABLEAU DES ABONNEMENTS (COMMUN) */
 #abonnement h2 {
-text-align: center;
-margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 table {
-margin: 0 auto;
-width: 1100px;
-border-collapse: collapse;
+    margin: 0 auto;
+    border-collapse: collapse;
 }
 
 th, td {
-text-align: left;
-border-bottom: 1px solid #31343E;
+    text-align: left;
+    border-bottom: 1px solid #31343E;
 }
 
 td {
-text-align: center;
+    text-align: center;
 }
 
 tr {
-height: 70px;
+    height: 70px;
 }
 
-/* Styles pour les colonnes Standard et Premium */
+/* Styles pour les colonnes Standard et Premium (COMMUN) */
 table tr td:last-child,
 table tr th:last-child {
-background-color: #1D1F2B;
+    background-color: #1D1F2B;
 }
 
 table tr td:last-child p,
 table tr th:last-child p,
 thead tr :nth-child(3) p {
-color: white;
+    color: white;
 }
 
-/* Styles pour les images de coches/traits */
+/* Styles pour les images de coches/traits (COMMUN) */
 .coche, .trait {
-background-repeat: no-repeat;
-background-position: center;
-background-size: 18px;
-margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    margin: auto;
 }
 
 .coche {
-background-image: url("../img/logo-valide-blanc.svg");
+    background-image: url("../img/logo-valide-blanc.svg");
 }
 
 .trait {
-background-image: url("../img/original_1.svg");
+    background-image: url("../img/original_1.svg");
 }
 
-/* Texte des petits caractères sous le tableau */
-#abonnement .p3 {
-margin: auto 0;
-width: 1100px;
-}
-
-/* SECTION REGARDEZ SELON VOS ENVIES */
+/* SECTION REGARDEZ SELON VOS ENVIES (COMMUN) */
 #envie {
-min-height: 150vh;
-background-image: url("../img/original.jpeg");
-background-size: 80%;
-background-position: center; /* <-- CORRECTION ICI */
-background-repeat: no-repeat;
+    min-height: 150vh;
+    background-image: url("../img/original.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #envie h2 {
-padding-top: 80px;
-padding-bottom: -10px;
+    padding-top: 80px;
+    padding-bottom: -10px;
 }
 
 #avantages {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: stretch;
-text-align: center;
-padding-top: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: center;
 }
 
 #avantages div {
-flex: 1;
-margin: 10px;
-padding: 20px;
-box-sizing: border-box;
-text-align: center;
-flex: 1;
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1;
 }
 
 #avantages img {
-width: 100px;
+    width: 100px;
 }
 
-/* SECTION QUESTIONS FRÉQUENTES (FAQ) */
+/* SECTION QUESTIONS FRÉQUENTES (FAQ) (COMMUN) */
 .faq {
-padding: 5px;
+    padding: 5px;
 }
 
 .question {
-display: flex;
-align-items: center;
-justify-content: space-between;
-background-color: #13151D;
-color: white;
-width: 1200px;
-max-width: 100%;
-border: none;
-padding: 0.75em;
-cursor: pointer;
-box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #13151D;
+    color: white;
+    max-width: 100%;
+    border: none;
+    padding: 0.75em;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .reponse {
-max-height: 0;
-overflow: hidden;
-background-color: #13151D;
-color: silver;
-width: 1200px;
-max-width: 100%;
-box-sizing: border-box;
-transition: max-height 0.3s ease, padding 0.3s ease;
-padding: 0 0.75em;
-text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #13151D;
+    color: silver;
+    max-width: 100%;
+    box-sizing: border-box;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 0.75em;
+    text-align: left;
 }
 
 .reponse.open {
-padding: 0 1em;
+    padding: 0 1em;
 }
 
 .icone {
-text-align: right;
-font-weight: bold;
-font-size: 35px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 35px;
 }
 
-/* Styles spécifiques au contenu de la réponse (FAQ) */
+/* Styles spécifiques au contenu de la réponse (FAQ) (COMMUN) */
 .reponse u {
-color: white;
+    color: white;
 }
 
 .reponse u:hover {
-cursor: pointer;
+    cursor: pointer;
 }
 
 ol li {
-text-indent: 0.75em;
+    text-indent: 0.75em;
 }
 
-/* SECTION ACCESSIBILITÉ */
+/* SECTION ACCESSIBILITÉ (COMMUN) */
 #accessibilite {
-width: 100%;
+    width: 100%;
 }
 
 #appareils {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: stretch;
-gap: 20px;
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .appareil {
-flex: 1 1 0;
-max-width: 250px;
-min-width: 200px;
-padding: 20px;
-box-sizing: border-box;
-border-radius: 10px;
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
+    flex: 1 1 0;
+    max-width: 250px;
+    min-width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #appareils img {
-width: 400px;
+    width: 400px;
 }
 
 #appareils p {
-margin: 1px;
+    margin: 1px;
 }
 
 /* ========================================================================= */
-/* 6. FOOTER */
+/* 6. FOOTER (COMMUN) */
 /* ========================================================================= */
 
 footer {
-background-color: #050714;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-box-sizing: border-box;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    background-color: #050714;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 footer img {
-width: 100px;
-margin: 20px 0 10px 0;
+    width: 100px;
+    margin: 20px 0 10px 0;
 }
 
 #liens-footer {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #liens-footer ul {
-display: flex;
-flex-direction: row;
-font-size: 16px;
-margin: 0;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    margin: 0;
 }
 
 #liens-footer li {
-color: silver;
-list-style-type: none;
-padding: 12px;
+    color: silver;
+    list-style-type: none;
+    padding: 12px;
 }
 
 #liens-footer li a {
-color: silver;
-text-decoration: none;
+    color: silver;
+    text-decoration: none;
 }
 
 #liens-footer li:hover,
 #liens-footer li a:hover {
-color: white;
-cursor: pointer;
+    color: white;
+    cursor: pointer;
 }
 
-/* Sélecteur de langue personnalisé (au-dessus des liens) */
+/* Sélecteur de langue personnalisé (COMMUN) */
 
 /* Conteneur principal du sélecteur */
-.language-selector-wrapper {
-position: relative;
-width: auto;
-display: inline-block;
+/* ========================================================================= */
+/* 6. FOOTER (COMMUN) */
+/* ========================================================================= */
+/* ... (Les styles footer précédents restent inchangés) ... */
+
+/* Sélecteur de langue personnalisé (COMMUN) */
+
+/* Conteneur principal du sélecteur */
+.selecteur-langue-conteneur {
+    position: relative;
+    width: auto;
+    display: inline-block;
 }
 
 /* Faux sélecteur (visible) */
-.custom-language-selector {
-/* Flexbox et positionnement */
-display: flex;
-align-items: center;
-height: 12px;
-bottom: 50px;
-
-/* Style visuel */
-padding: 8px 12px;
-background-color: transparent;
-color: #a7a7a9;
-font-size: 16px;
-border-radius: 4px;
-cursor: pointer;
-
-/* Bordure et transition */
-border: 1px solid transparent;
-transition: background-color 0.2s ease, border-color 0.2s ease;
+.selecteur-langue-personnalise {
+    /* Flexbox et style visuel */
+    display: flex;
+    align-items: center;
+    height: 12px;
+    bottom: 50px;
+    padding: 8px 12px;
+    background-color: transparent;
+    color: #a7a7a9;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Bordure et transition */
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 /* Le texte "Français" */
-#selected-language {
-flex-grow: 1;
-color: silver;
-padding-right: 8px;
-transform: translateY(4px);
-font-size: 12px;
-transition: text-decoration 0.2s ease, color 0.2s ease;
+#langue-selectionnee {
+    flex-grow: 1;
+    color: silver;
+    padding-right: 8px;
+    transform: translateY(4px);
+    font-size: 12px;
+    transition: text-decoration 0.2s ease, color 0.2s ease;
 }
 
 /* Styles pour les icônes (globe et flèche) */
 .icone-gauche,
 .icone-droite {
-display: block;
-/* Filtre pour la couleur silver/gris par défaut */
-filter: invert(82%) sepia(0%) saturate(0%) brightness(95%);
+    display: block;
+    /* Filtre pour la couleur silver/gris par défaut */
+    filter: invert(82%) sepia(0%) saturate(0%) brightness(95%);
 }
 
 .icone-gauche {
-width: 20px;
-height: 20px;
-margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
 
 .icone-droite {
-width: 16px;
-height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 /* Le vrai <select> (invisible) */
-.original-language-select {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-opacity: 0;
-cursor: pointer;
+.selecteur-langue-original {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
 
-.original-language-select option {
-font-size: 12px;
+.selecteur-langue-original option {
+    font-size: 12px;
 }
 
-/* ÉTATS INTERACTIFS DU SÉLECTEUR DE LANGUE */
+/* ÉTATS INTERACTIFS DU SÉLECTEUR DE LANGUE (COMMUN) */
 
 /* 1. Survol (Hover) */
-.language-selector-wrapper:hover #selected-language {
-text-decoration: underline;
-color: white;
+.selecteur-langue-conteneur:hover #langue-selectionnee {
+    text-decoration: underline;
+    color: white;
 }
 
-.language-selector-wrapper:hover .icone-gauche,
-.language-selector-wrapper:hover .icone-droite {
-/* Filtre pour rendre les icônes blanches (Noir -> Blanc) */
-filter: brightness(0) invert(1);
+.selecteur-langue-conteneur:hover .icone-gauche,
+.selecteur-langue-conteneur:hover .icone-droite {
+    /* Filtre pour rendre les icônes blanches (Noir -> Blanc) */
+    filter: brightness(0) invert(1);
 }
 
 /* 2. Focus (lorsque le <select> est actif) */
-.language-selector-wrapper:focus-within .custom-language-selector {
-border-color: #f9f9f9;
+.selecteur-langue-conteneur:focus-within .selecteur-langue-personnalise {
+    border-color: #f9f9f9;
+}
+
+/* ========================================================================= */
+/* 7. MEDIA QUERIES */
+/* ========================================================================= */
+
+/* Style pour les écrans d'ordinateurs (à partir de 1025px) */
+@media screen and (min-width: 1025px) {
+
+    /* Section HERO (dimensions du contenu) */
+    .texte {
+        width: 70%;
+        margin-top: 175px;
+    }
+
+    /* Formulaire d'inscription (taille spécifique au desktop) */
+    #adresse-e-mail {
+        width: 350px;
+        height: 35px;
+        border-radius: 2px 0 0 2px;
+    }
+
+    #btn-inscription {
+        width: 160px;
+        height: 35px;
+        border-radius: 0 2px 2px 0;
+    }
+
+    /* TABLEAU DES ABONNEMENTS (largeur du desktop) */
+    table {
+        width: 1100px;
+    }
+
+    /* Texte des petits caractères sous le tableau */
+    #abonnement .p3 {
+        margin: auto 0;
+        width: 1100px;
+    }
+
+    /* SECTION REGARDEZ SELON VOS ENVIES */
+    #envie {
+        background-size: 80%;
+    }
+
+    #avantages {
+        padding-top: 550px;
+    }
+
+    /* FAQ (largeur du desktop) */
+    .question, .reponse {
+        width: 1200px;
+    }
+
+}
+
+/* Style pour les écrans de tablettes (entre 481px et 1024px) */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+
+
+}
+
+/* Style pour les écrans de téléphones (en dessous de 481px) */
+@media screen and (max-width: 480px) {
+
+
+
 }

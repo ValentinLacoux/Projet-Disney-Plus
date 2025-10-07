@@ -50,7 +50,7 @@ p {
     font-size: 11px;
 }
 
-/* Styles pour les listes (utilisé dans la FAQ/Footer) */
+/* Styles pour les listes */
 li {
     font-size: 16px;
 }
@@ -81,7 +81,7 @@ nav {
 }
 
 /* ========================================================================= */
-/* 3. SECTION HERO (Bannière principale) (COMMUN) */
+/* 3. SECTION HERO (COMMUN) */
 /* ========================================================================= */
 
 #hero {
@@ -118,7 +118,7 @@ form {
     background-color: #31343E;
     border: 0 solid;
     box-sizing: border-box;
-    margin: -5px; /* Marge négative pour coller au bouton */
+    margin: -5px;
     padding-left: 10px;
     color: silver;
 }
@@ -148,14 +148,13 @@ form {
     width: 30px;
     height: auto;
     bottom: -90px;
-    /* Filtre pour la couleur (Blanc/Cyan - ajusté pour une meilleure lisibilité) */
     filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(7496%) hue-rotate(85deg) brightness(94%) contrast(94%);
     animation: rebond 2s infinite;
 }
 
 #fleche:hover {
     cursor: pointer;
-    filter: brightness(0) invert(1); /* Devient blanc pur au survol */
+    filter: brightness(0) invert(1); /* Devient blanc au survol */
 }
 
 /* Animation du rebond de la flèche (COMMUN) */
@@ -241,7 +240,7 @@ tr {
     height: 70px;
 }
 
-/* Styles pour les colonnes Standard et Premium (COMMUN) */
+/* Styles pour les 2 premieres colonnes (COMMUN) */
 table tr td:last-child,
 table tr th:last-child {
     background-color: #1D1F2B;
@@ -444,13 +443,10 @@ footer img {
     cursor: pointer;
 }
 
-/* Sélecteur de langue personnalisé (COMMUN) */
-
 /* Conteneur principal du sélecteur */
 /* ========================================================================= */
 /* 6. FOOTER (COMMUN) */
 /* ========================================================================= */
-/* ... (Les styles footer précédents restent inchangés) ... */
 
 /* Sélecteur de langue personnalisé (COMMUN) */
 
@@ -493,7 +489,6 @@ footer img {
 .icone-gauche,
 .icone-droite {
     display: block;
-    /* Filtre pour la couleur silver/gris par défaut */
     filter: invert(82%) sepia(0%) saturate(0%) brightness(95%);
 }
 
@@ -525,7 +520,6 @@ footer img {
 
 /* ÉTATS INTERACTIFS DU SÉLECTEUR DE LANGUE (COMMUN) */
 
-/* 1. Survol (Hover) */
 .selecteur-langue-conteneur:hover #langue-selectionnee {
     text-decoration: underline;
     color: white;
@@ -533,7 +527,6 @@ footer img {
 
 .selecteur-langue-conteneur:hover .icone-gauche,
 .selecteur-langue-conteneur:hover .icone-droite {
-    /* Filtre pour rendre les icônes blanches (Noir -> Blanc) */
     filter: brightness(0) invert(1);
 }
 
@@ -549,13 +542,13 @@ footer img {
 /* Style pour les écrans d'ordinateurs (à partir de 1025px) */
 @media screen and (min-width: 1025px) {
 
-    /* Section HERO (dimensions du contenu) */
+    /* Section HERO */
     .texte {
         width: 70%;
         margin-top: 175px;
     }
 
-    /* Formulaire d'inscription (taille spécifique au desktop) */
+    /* Formulaire d'inscription */
     #adresse-e-mail {
         width: 350px;
         height: 35px;
@@ -568,7 +561,7 @@ footer img {
         border-radius: 0 2px 2px 0;
     }
 
-    /* TABLEAU DES ABONNEMENTS (largeur du desktop) */
+    /* TABLEAU DES ABONNEMENTS */
     table {
         width: 1100px;
     }
@@ -588,7 +581,7 @@ footer img {
         padding-top: 550px;
     }
 
-    /* FAQ (largeur du desktop) */
+    /* FAQ  */
     .question, .reponse {
         width: 1200px;
     }

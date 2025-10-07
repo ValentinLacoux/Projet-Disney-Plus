@@ -597,13 +597,291 @@ footer img {
 /* Style pour les écrans de tablettes (entre 481px et 1024px) */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
 
+    /* --- TYPOGRAPHIE / HÉRO --- */
+    h1 { 
+        font-size: 30px; 
+        line-height: 36px; 
+    }
+    
+    .texte { 
+        width: 90%; 
+        max-width: 650px; 
+        margin: 100px auto 0 auto; /* Centrage */
+        text-align: center; /* Assurer que le texte est centré */
+    } 
+    
+    #adresse-e-mail { 
+        width: 300px; 
+    }
+    
+    #btn-inscription { 
+        width: 140px; 
+    }
+    
+    #fleche { 
+        left: 50%; 
+        transform: translateX(-50%); 
+        bottom: -50px; 
+    }
 
+    /* --- OEUVRE ORIGINALE (Centrage visuel) --- */
+    #oeuvre-originale { 
+        min-height: 80vh; 
+        padding-left: 0; 
+        /* Centrage des blocs au milieu de l'écran */
+        align-items: center; 
+        text-align: center;
+    }
+    
+    #seulement-sur-disney { 
+        width: 250px; 
+        transform: translateY(0); 
+    }
+    
+    #oeuvre-originale h4,
+    #oeuvre-originale p { 
+        width: 90%; 
+        max-width: 450px; 
+        margin: 0 auto; /* Centrage du conteneur de texte */
+        padding-left: 0; 
+        text-align: center; /* Centrage du texte lui-même */
+    }
 
+    /* --- ABONNEMENT (Défilement horizontal contrôlé) --- */
+    #abonnement { 
+        /* Permet le défilement horizontal de la section si le tableau est trop large */
+        overflow-x: auto; 
+        padding: 20px 0; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    table { 
+        /* Force le tableau à conserver une taille minimum pour la lisibilité */
+        min-width: 950px; 
+        width: 98%; 
+        max-width: 950px; 
+    } 
+    
+    /* Centrage et fluidité du paragraphe sous le tableau */
+    #abonnement .p3 { 
+        width: 98%; 
+        max-width: 950px; 
+        margin: 20px auto; 
+        padding: 0 1%; 
+        text-align: center; 
+    }
+
+    /* --- ENVIES --- */
+    #envie { 
+        min-height: 120vh; 
+        background-size: contain; 
+        background-position: center top; 
+    }
+    
+    #avantages { 
+        width: 95%; 
+        max-width: 900px; 
+        padding-top: 550px; 
+        margin: 0 auto; /* Centrage du conteneur d'avantages */
+        justify-content: space-between; 
+        /* Permet le retour à la ligne pour l'adaptation */
+        flex-wrap: wrap;
+    }
+    
+    #avantages div { 
+        /* S'assure que les blocs se répartissent bien */
+        flex: 1 1 30%; 
+        margin: 10px; 
+    }
+
+    /* --- FAQ & ACCESSIBILITÉ --- */
+    /* Centrage et fluidité des questions/réponses */
+    .question, .reponse { 
+        width: 90%; 
+        max-width: 900px; 
+        margin: 5px auto; 
+        box-sizing: border-box; 
+        padding: 0.75em 1em; 
+        text-align: left; /* Le contenu des questions/réponses doit rester à gauche */
+    }
+    
+    /* Rendre les images des appareils fluides */
+    #appareils img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    #appareils { 
+        width: 98%; 
+        max-width: 950px; 
+        margin: 0 auto; /* Centrage du conteneur des appareils */
+    }
+    
+    /* --- FOOTER --- */
+    #liens-footer ul { 
+        width: 98%; 
+        margin: 10px auto; /* Centrage */
+        /* Permet le retour à la ligne pour les liens */
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
 }
 
 /* Style pour les écrans de téléphones (en dessous de 481px) */
 @media screen and (max-width: 480px) {
+    
+    /* --- TYPOGRAPHIE / HÉRO --- */
+    h1 { 
+        font-size: 24px; 
+        line-height: 30px; 
+    }
+    h4 { 
+        font-size: 16px; 
+    }
+    .p2 { 
+        font-size: 14px; 
+    }
+    
+    /* Déplacement de la navigation à gauche pour une meilleure accessibilité */
+    nav { 
+        left: 2%; 
+        right: auto; 
+        top: 2%; 
+    } 
+    #identification { 
+        padding: 6px 10px; 
+        font-size: 12px; 
+    }
+    
+    #hero { 
+        min-height: 80vh; 
+    }
+    
+    .texte { 
+        width: 95%; 
+        margin: 50px auto 0 auto; 
+        text-align: center; 
+    }
 
+    /* Formulaire empilé (l'input et le bouton prennent toute la largeur) */
+    #adresse-e-mail, #btn-inscription { 
+        width: 90%; 
+        height: 40px; /* Taille uniforme */
+        margin: 5px auto; 
+        border-radius: 4px; 
+        /* Règle pour casser l'alignement côte à côte du Desktop */
+        display: block; 
+    }
+    
+    #fleche { 
+        display: none; /* Cache la flèche animée sur mobile */
+    }
 
+    /* --- OEUVRE ORIGINALE --- */
+    #oeuvre-originale { 
+        min-height: 60vh; 
+        padding-left: 0; 
+        text-align: center; 
+        align-items: center; 
+    }
+    
+    #seulement-sur-disney { 
+        width: 180px; 
+        transform: translateY(0); 
+    }
+    
+    #oeuvre-originale h4,
+    #oeuvre-originale p { 
+        width: 95%; 
+        margin: 0 auto; 
+        padding-left: 0; 
+        text-align: center; 
+    }
 
+    /* --- ABONNEMENT (Tableau avec défilement horizontal) --- */
+    #abonnement { 
+        /* Réactive le défilement horizontal pour le tableau trop large */
+        overflow-x: auto; 
+    }
+    
+    table { 
+        /* Force une largeur minimale pour la lisibilité des colonnes */
+        min-width: 650px; 
+        width: 95%; 
+        table-layout: auto; 
+    }
+    
+    #abonnement .p3 { 
+        width: 95%; 
+        padding: 0 10px; 
+        margin: 0 auto; 
+        text-align: center; 
+    }
+
+    /* --- ENVIES (Empilement) --- */
+    #envie { 
+        min-height: 600px; 
+        background-size: contain; 
+        background-position: top center; 
+    }
+    
+    #avantages { 
+        /* Empilement vertical */
+        flex-direction: column; 
+        width: 90%; 
+        margin: 0 auto; 
+        padding-top: 0; 
+    }
+    
+    #avantages div { 
+        /* Les blocs prennent toute la largeur disponible */
+        flex: 1 1 100%;
+        margin: 15px 0; 
+    }
+    
+    /* --- FAQ & ACCESSIBILITÉ (Empilement) --- */
+    .question, .reponse { 
+        width: 95%; 
+        margin: 5px auto; 
+        font-size: 14px; 
+        padding: 0.75em 1em; 
+        text-align: left; 
+    }
+    
+    #appareils { 
+        /* Empilement vertical */
+        flex-direction: column; 
+        width: 90%; 
+        margin: 0 auto; 
+        gap: 0; 
+    }
+    
+    .appareil { 
+        width: 100%; 
+        min-width: auto; 
+        max-width: none; 
+    }
+
+    /* Rendre les images des appareils fluides */
+    #appareils img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    
+    /* --- FOOTER --- */
+    #liens-footer ul { 
+        /* Empilement des liens verticalement */
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%; 
+        margin: 10px auto; 
+    }
+    
+    #liens-footer li { 
+        padding: 5px 0; 
+        font-size: 12px; 
+    }
 }

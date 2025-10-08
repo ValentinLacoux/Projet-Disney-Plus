@@ -56,7 +56,7 @@ li {
 }
 
 /* ========================================================================= */
-/* 2. HEADER & NAVIGATION (COMMUN) */
+/* 2. HEADER & NAVIGATION */
 /* ========================================================================= */
 
 /* Positionnement de la barre de navigation */
@@ -87,7 +87,7 @@ nav {
 }
 
 /* ========================================================================= */
-/* 3. SECTION HERO (COMMUN) */
+/* 3. SECTION HERO */
 /* ========================================================================= */
 
 #hero {
@@ -109,7 +109,7 @@ nav {
     padding: 5.5% 0;
 }
 
-/* Formulaire d'inscription (COMMUN) */
+/* Formulaire d'inscription */
 form {
     margin: 20px 0;
 }
@@ -129,26 +129,26 @@ form {
     color: silver;
 }
 
-/* Focus de l'input email (COMMUN) */
+/* Focus de l'input email */
 #adresse-e-mail:focus {
     border: 0.5px solid silver;
     outline: none;
     box-sizing: border-box;
 }
 
-/* Bouton S'INSCRIRE (COMMUN) */
+/* Bouton S'INSCRIRE */
 #btn-inscription {
     border: 0 solid;
     background-color: #05D6E8;
 }
 
-/* Hover du bouton S'INSCRIRE (COMMUN) */
+/* Hover du bouton S'INSCRIRE */
 #btn-inscription:hover {
     background-color: #00ACC1;
     cursor: pointer;
 }
 
-/* Icône flèche animée (COMMUN) */
+/* Icône flèche animée */
 #fleche {
     position: absolute;
     width: 30px;
@@ -163,7 +163,7 @@ form {
     filter: brightness(0) invert(1); /* Devient blanc au survol */
 }
 
-/* Animation du rebond de la flèche (COMMUN) */
+/* Animation du rebond de la flèche */
 @keyframes rebond {
     0%, 80% { transform: translateY(0); } /* Début, fin et pause */
     25%, 65% { transform: translateY(-15px); } /* Point le plus haut */
@@ -171,7 +171,7 @@ form {
 }
 
 /* ========================================================================= */
-/* 4. SECTION OEUVRE ORIGINALE (COMMUN) */
+/* 4. SECTION OEUVRE ORIGINALE */
 /* ========================================================================= */
 
 #oeuvre-originale {
@@ -201,7 +201,7 @@ form {
 }
 
 /* ========================================================================= */
-/* 5. SECTIONS GÉNÉRIQUES (COMMUN) */
+/* 5. SECTIONS GÉNÉRIQUES */
 /* ========================================================================= */
 
 #abonnement, #envie, #questions-frequentes, #accessibilite{
@@ -222,7 +222,7 @@ form {
     background-repeat: no-repeat;
 }
 
-/* TABLEAU DES ABONNEMENTS (COMMUN) */
+/* TABLEAU DES ABONNEMENTS */
 #abonnement h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -246,7 +246,7 @@ tr {
     height: 70px;
 }
 
-/* Styles pour les 2 premieres colonnes (COMMUN) */
+/* Styles pour les 2 premieres colonnes */
 table tr td:last-child,
 table tr th:last-child {
     background-color: #1D1F2B;
@@ -258,7 +258,7 @@ thead tr :nth-child(3) p {
     color: white;
 }
 
-/* Styles pour les images de coches/traits (COMMUN) */
+/* Styles pour les images de coches/traits */
 .coche, .trait {
     background-repeat: no-repeat;
     background-position: center;
@@ -274,7 +274,7 @@ thead tr :nth-child(3) p {
     background-image: url("../img/original_1.svg");
 }
 
-/* SECTION REGARDEZ SELON VOS ENVIES (COMMUN) */
+/* SECTION REGARDEZ SELON VOS ENVIES */
 #envie {
     min-height: 150vh;
     background-image: url("../img/original.jpeg");
@@ -308,7 +308,7 @@ thead tr :nth-child(3) p {
     width: 100px;
 }
 
-/* SECTION QUESTIONS FRÉQUENTES (FAQ) (COMMUN) */
+/* SECTION QUESTIONS FRÉQUENTES (FAQ) */
 .faq {
     padding: 5px;
 }
@@ -319,11 +319,16 @@ thead tr :nth-child(3) p {
     justify-content: space-between;
     background-color: #13151D;
     color: white;
-    max-width: 100%;
+    max-width: 1200px;
     border: none;
     padding: 0.75em;
     cursor: pointer;
     box-sizing: border-box;
+}
+
+#questions-frequentes {
+    text-align: center; /* Important pour centrer les blocs internes */
+    padding: 40px 0;
 }
 
 .reponse {
@@ -348,7 +353,7 @@ thead tr :nth-child(3) p {
     font-size: 35px;
 }
 
-/* Styles spécifiques au contenu de la réponse (FAQ) (COMMUN) */
+/* Styles spécifiques au contenu de la réponse (FAQ) */
 .reponse u {
     color: white;
 }
@@ -361,9 +366,12 @@ ol li {
     text-indent: 0.75em;
 }
 
-/* SECTION ACCESSIBILITÉ (COMMUN) */
+/* SECTION ACCESSIBILITÉ */
 #accessibilite {
     width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
 #appareils {
@@ -400,7 +408,7 @@ ol li {
 }
 
 /* ========================================================================= */
-/* 6. FOOTER (COMMUN) */
+/* 6. FOOTER */
 /* ========================================================================= */
 
 footer {
@@ -451,10 +459,10 @@ footer img {
 
 /* Conteneur principal du sélecteur */
 /* ========================================================================= */
-/* 6. FOOTER (COMMUN) */
+/* 6. FOOTER */
 /* ========================================================================= */
 
-/* Sélecteur de langue personnalisé (COMMUN) */
+/* Sélecteur de langue personnalisé */
 
 /* Conteneur principal du sélecteur */
 .selecteur-langue-conteneur {
@@ -524,7 +532,7 @@ footer img {
     font-size: 12px;
 }
 
-/* ÉTATS INTERACTIFS DU SÉLECTEUR DE LANGUE (COMMUN) */
+/* ÉTATS INTERACTIFS DU SÉLECTEUR DE LANGUE */
 
 .selecteur-langue-conteneur:hover #langue-selectionnee {
     text-decoration: underline;
@@ -602,88 +610,136 @@ footer img {
         font-size: 30px; 
         line-height: 36px; 
     }
-    
+    #hero {
+        min-height: 70vh;
+    }
+
     .texte { 
         width: 90%; 
         max-width: 650px; 
-        margin: 100px auto 0 auto; /* Centrage */
+        margin: 300px auto 0 auto; /* Centrage */
         text-align: center; /* Assurer que le texte est centré */
+        align-items: center;
     } 
     
     #adresse-e-mail { 
-        width: 300px; 
+        width: 360px;
+        height: 50px; 
     }
     
     #btn-inscription { 
-        width: 140px; 
+        width: 200px;
+        height: 50px;
     }
     
     #fleche { 
         left: 50%; 
-        transform: translateX(-50%); 
-        bottom: -50px; 
+        bottom: 350px; 
     }
 
     /* --- OEUVRE ORIGINALE (Centrage visuel) --- */
     #oeuvre-originale { 
-        min-height: 80vh; 
+        min-height: 40vh; 
         padding-left: 0; 
         /* Centrage des blocs au milieu de l'écran */
-        align-items: center; 
-        text-align: center;
+        align-items: left;
     }
     
     #seulement-sur-disney { 
         width: 250px; 
-        transform: translateY(0); 
     }
     
-    #oeuvre-originale h4,
+    #oeuvre-originale h2,
     #oeuvre-originale p { 
         width: 90%; 
-        max-width: 450px; 
-        margin: 0 auto; /* Centrage du conteneur de texte */
+        margin: 10px 40px; /* Centrage du conteneur de texte */
         padding-left: 0; 
-        text-align: center; /* Centrage du texte lui-même */
+        text-align: left; /* Centrage du texte lui-même */
     }
 
-    /* --- ABONNEMENT (Défilement horizontal contrôlé) --- */
+    /* --- ABONNEMENT --- */
     #abonnement { 
-        /* Permet le défilement horizontal de la section si le tableau est trop large */
-        overflow-x: auto; 
-        padding: 20px 0; 
-        width: 100%; 
-        box-sizing: border-box; 
+        overflow-x: hidden; 
+        padding: 40px 0; /* Ajoute plus d'espace vertical autour du tableau */
+        min-height: 70vh
     }
     
     table { 
-        /* Force le tableau à conserver une taille minimum pour la lisibilité */
-        min-width: 950px; 
-        width: 98%; 
-        max-width: 950px; 
+        width: 90%; /* Prend 90% de la largeur du conteneur parent */
+        max-width: 700px; /* Limite la largeur du tableau à 700px maximum */
+        min-width: 450px; 
+        margin: 0 auto; /* Centre le tableau dans l'espace restant */
+        table-layout: fixed; 
+        text-align: center;
     } 
+    
+    th, td p {
+        font-size: 12px ; /* Légère augmentation pour plus de lisibilité */
+    }
+
+    th, td {
+        padding: 10px 5px; /* Légère augmentation du padding pour l'aération */
+    }
+
+    th:first-child, td:first-child { 
+        width: 40%; 
+        padding-left: 10px;
+        text-align: left;
+    }
+    th:nth-child(2), td:nth-child(2),
+    th:nth-child(3), td:nth-child(3),
+    th:nth-child(4), td:nth-child(4) { 
+        width: 20%; 
+        text-align: center;
+    }
+
+    thead th {
+        height: 60px;
+        vertical-align: bottom; /* Aligne le texte au bas des TH */
+    }
+
+    .coche, .trait {
+        background-size: 16px; 
+    }
     
     /* Centrage et fluidité du paragraphe sous le tableau */
     #abonnement .p3 { 
-        width: 98%; 
-        max-width: 950px; 
+        width: 90%; 
+        max-width: 700px; 
         margin: 20px auto; 
         padding: 0 1%; 
-        text-align: center; 
+        text-align: left; 
     }
 
     /* --- ENVIES --- */
     #envie { 
-        min-height: 120vh; 
+        min-height: 40vh; 
         background-size: contain; 
-        background-position: center top; 
+        background-position: center top;
+        padding-top: -150px;
+        text-align: center;
+    }
+    #envie h2 { 
+        padding-top: 0;
+        margin-top: -50px;
+    }
+
+    #envie p {
+        margin-top: -5px;
+        margin-bottom: 100px;
+    }
+
+    #div-envie {
+        text-align: center;
+        
     }
     
     #avantages { 
-        width: 95%; 
-        max-width: 900px; 
-        padding-top: 550px; 
-        margin: 0 auto; /* Centrage du conteneur d'avantages */
+        width: 95%;
+        min-height: 30vh; 
+        max-width: 700px; 
+        padding-top: 650px; 
+        margin: -350px auto 0; /* Centrage du conteneur d'avantages */
         justify-content: space-between; 
         /* Permet le retour à la ligne pour l'adaptation */
         flex-wrap: wrap;
@@ -697,6 +753,17 @@ footer img {
 
     /* --- FAQ & ACCESSIBILITÉ --- */
     /* Centrage et fluidité des questions/réponses */
+
+    .faq { 
+        width: 90%; /* Prend 90% de l'écran */
+        max-width: 700px; /* Limite la largeur maximale sur tablette */
+        margin: 0 auto 8px auto; 
+    }
+
+    #questions-frequentes {
+        min-height: 60vh;
+    }
+
     .question, .reponse { 
         width: 90%; 
         max-width: 900px; 
@@ -715,16 +782,27 @@ footer img {
 
     #appareils { 
         width: 98%; 
-        max-width: 950px; 
+        max-width: 950px;
         margin: 0 auto; /* Centrage du conteneur des appareils */
+    }
+
+    #accessibilite {
+        min-height: 50vh;
+    }
+
+    .reponse {
+        padding: 0 0.75em;
     }
     
     /* --- FOOTER --- */
+
     #liens-footer ul { 
         width: 98%; 
-        margin: 10px auto; /* Centrage */
+        max-width: 950px;
+        margin: 10px -50px; /* Centrage */
         /* Permet le retour à la ligne pour les liens */
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: center; 
     }
 }
@@ -746,8 +824,6 @@ footer img {
     
     /* Déplacement de la navigation à gauche pour une meilleure accessibilité */
     nav { 
-        left: 2%; 
-        right: auto; 
         top: 2%; 
     } 
     #identification { 
@@ -756,7 +832,7 @@ footer img {
     }
     
     #hero { 
-        min-height: 80vh; 
+        min-height: 100vh;
     }
     
     .texte { 

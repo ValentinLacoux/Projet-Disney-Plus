@@ -68,7 +68,6 @@ nav {
     background: transparent;
     z-index: 1000;
     color: white;
-    font-family: "InspireTWDC";
 }
 
 /* Bouton S'IDENTIFIER */
@@ -192,7 +191,6 @@ form {
 
     /* Style du contenu */
     color: white;
-    font-family: "InspireTWDC";
     font-weight: 600;
 }
 
@@ -246,7 +244,7 @@ tr {
     height: 70px;
 }
 
-/* Styles pour les 2 premieres colonnes */
+/* Styles pour la dernière colonne */
 table tr td:last-child,
 table tr th:last-child {
     background-color: #1D1F2B;
@@ -284,7 +282,6 @@ thead tr :nth-child(3) p {
 
 #envie h2 {
     padding-top: 80px;
-    padding-bottom: -10px;
 }
 
 #avantages {
@@ -301,7 +298,6 @@ thead tr :nth-child(3) p {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    flex: 1;
 }
 
 #avantages img {
@@ -418,9 +414,6 @@ footer {
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 footer img {
@@ -431,13 +424,14 @@ footer img {
 #liens-footer {
     display: flex;
     flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
 }
 
 #liens-footer ul {
     display: flex;
     flex-direction: row;
     font-size: 16px;
-    margin: 0;
 }
 
 #liens-footer li {
@@ -456,11 +450,6 @@ footer img {
     color: white;
     cursor: pointer;
 }
-
-/* Conteneur principal du sélecteur */
-/* ========================================================================= */
-/* 6. FOOTER */
-/* ========================================================================= */
 
 /* Sélecteur de langue personnalisé */
 
@@ -595,7 +584,7 @@ footer img {
         padding-top: 550px;
     }
 
-    /* FAQ  */
+    /* FAQ  */
     .question, .reponse {
         width: 1200px;
     }
@@ -620,7 +609,6 @@ footer img {
         max-width: 650px; 
         margin: 300px auto 0 auto; /* Centrage */
         text-align: center; /* Assurer que le texte est centré */
-        align-items: center;
         position: relative;
     } 
     
@@ -719,7 +707,6 @@ footer img {
         min-height: 40vh; 
         background-size: contain; 
         background-position: center top;
-        padding-top: -150px;
         text-align: center;
     }
     #envie h2 { 
@@ -732,11 +719,6 @@ footer img {
         margin-bottom: 100px;
     }
 
-    #div-envie {
-        text-align: center;
-        
-    }
-    
     #avantages { 
         width: 95%;
         min-height: 30vh; 
@@ -752,6 +734,7 @@ footer img {
         /* S'assure que les blocs se répartissent bien */
         flex: 1 1 30%; 
         margin: 10px; 
+        box-sizing: border-box;
     }
 
     /* --- FAQ & ACCESSIBILITÉ --- */
@@ -807,8 +790,7 @@ footer img {
         width: 98%; 
         max-width: 950px;
         margin: 10px -50px; /* Centrage */
-        /* Permet le retour à la ligne pour les liens */
-        flex-wrap: wrap;
+        flex-wrap: wrap;    /* Permet le retour à la ligne pour les liens */
         align-items: center;
         justify-content: center; 
     }
@@ -833,6 +815,7 @@ footer img {
     nav { 
         top: 2%; 
     } 
+
     #identification { 
         padding: 6px 10px; 
         font-size: 12px; 
@@ -840,12 +823,14 @@ footer img {
     
     #hero { 
         min-height: 100vh;
+        position: relative;
     }
     
     .texte { 
         width: 95%; 
-        margin: 50px auto 0 auto; 
-        text-align: center; 
+        margin: 300px auto 0 auto; 
+        text-align: center;
+        position: relative;
     }
 
     /* Formulaire empilé (l'input et le bouton prennent toute la largeur) */
@@ -859,61 +844,135 @@ footer img {
     }
     
     #fleche { 
+        position: absolute;
+        left: 46.5%; 
+        bottom: -50px;
     }
+
 
     /* --- OEUVRE ORIGINALE --- */
     #oeuvre-originale { 
+        background-image: url("../img/original_3.jpeg");
         min-height: 60vh; 
         padding-left: 0; 
         text-align: center; 
         align-items: center; 
+        background-size: contain;
+        background-color: #050714;
     }
     
     #seulement-sur-disney { 
-        width: 180px; 
-        transform: translateY(0); 
+        width: 280px;
+        margin-bottom: 400px;
     }
     
     #oeuvre-originale h4,
     #oeuvre-originale p { 
         width: 95%; 
-        margin: 0 auto; 
+        margin: 10px auto; 
         padding-left: 0; 
         text-align: center; 
     }
 
-    /* --- ABONNEMENT (Tableau avec défilement horizontal) --- */
-    #abonnement { 
-        /* Réactive le défilement horizontal pour le tableau trop large */
-        overflow-x: auto; 
+    /* --- ABONNEMENTS --- */
+    #abonnement {
+        overflow-x: hidden; /* Garantit qu'il n'y a pas de défilement */
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #abonnement div {
+        margin-bottom: 100px;
+    }
+
+    #abonnement .p3 {
+        text-align: center;
+        width: 80%;
+        margin: auto;
     }
     
-    table { 
-        /* Force une largeur minimale pour la lisibilité des colonnes */
-        min-width: 650px; 
+    table {
         width: 95%; 
-        table-layout: auto; 
+        margin: 0 auto;
+        border-collapse: collapse;
+        border-bottom: 1px solid #31343E;
     }
     
-    #abonnement .p3 { 
+    .coche, .trait {
+        height: 40px;
+    }
+
+    tr {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+        margin-bottom: 20px;
         width: 95%; 
-        padding: 0 10px; 
-        margin: 0 auto; 
-        text-align: center; 
+        margin-left: auto;
+        margin-bottom: 50px;
+        margin-right: auto;
+    }
+    
+    tr th:first-child {
+        /* FORCE le TH à prendre 100% de la largeur, poussant les TD en dessous */
+        flex-basis: 100%; 
+        display: block; 
+        text-align: center;
+        padding: 12px 10px;
+    }
+    
+    tr td {
+        /* Définit la taille des trois TD à 1/3 chacun sur la ligne suivante */
+        flex-basis: 33.333%; 
+        display: block; /* Force le TD à respecter flex-basis et le flux */
+        text-align: center;
+        padding: 8px 5px; 
+        border: none;
+        box-sizing: border-box;
+        border: none;
+    }
+    
+    /* Autorise le retour à la ligne pour le texte long */
+    tr td p {
+        white-space: normal; 
+        word-break: break-word; 
+        margin: 0;
+        text-align: center;
+    }
+
+    table tr td:last-child,
+    table tr th:last-child {
+        background-color: #050714;
+    }
+    td {
+        border: none;
+    }
+
+    th {
+        border: none;
+        border-top: 1px solid #31343E;
     }
 
     /* --- ENVIES (Empilement) --- */
     #envie { 
-        min-height: 600px; 
+        background-image: url(../img/original_1.jpeg);
         background-size: contain; 
-        background-position: top center; 
+        background-position: center top;
+        text-align: center;
+        min-height: 40vh;
     }
-    
+
+    #envie h2 {
+        margin-top: -130px;
+    }
+
+
     #avantages { 
         /* Empilement vertical */
         flex-direction: column; 
         width: 90%; 
-        margin: 0 auto; 
+        margin: 300px auto 50px; 
         padding-top: 0; 
     }
     
@@ -928,22 +987,33 @@ footer img {
         width: 95%; 
         margin: 5px auto; 
         font-size: 14px; 
-        padding: 0.75em 1em; 
+        padding: 0 1em; 
         text-align: left; 
+    }
+
+    #questions-frequentes {
+        min-height: 60vh;
+    }
+
+    .reponse.open {
+        margin: -5.5px auto;
     }
     
     #appareils { 
         /* Empilement vertical */
-        flex-direction: column; 
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
         width: 90%; 
         margin: 0 auto; 
-        gap: 0; 
+        gap: 10px; 
     }
     
     .appareil { 
-        width: 100%; 
-        min-width: auto; 
-        max-width: none; 
+        width: 48%; /* Laisse 2% pour les marges ou le gap */
+        flex-basis: auto;
+        min-width: 150px;
+        max-width: 300px;
     }
 
     /* Rendre les images des appareils fluides */

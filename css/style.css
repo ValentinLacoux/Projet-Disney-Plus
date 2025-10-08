@@ -866,12 +866,16 @@ footer img {
         margin-bottom: 400px;
     }
     
-    #oeuvre-originale h4,
+    #oeuvre-originale h2,
     #oeuvre-originale p { 
         width: 95%; 
         margin: 10px auto; 
         padding-left: 0; 
         text-align: center; 
+    }
+
+    #oeuvre-originale h2 {
+        margin-top: 50px;
     }
 
     /* --- ABONNEMENTS --- */

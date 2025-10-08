@@ -612,6 +612,7 @@ footer img {
     }
     #hero {
         min-height: 70vh;
+        position: relative; 
     }
 
     .texte { 
@@ -620,6 +621,7 @@ footer img {
         margin: 300px auto 0 auto; /* Centrage */
         text-align: center; /* Assurer que le texte est centré */
         align-items: center;
+        position: relative;
     } 
     
     #adresse-e-mail { 
@@ -632,9 +634,10 @@ footer img {
         height: 50px;
     }
     
-    #fleche { 
+    #fleche {
+        position: absolute;
         left: 50%; 
-        bottom: 350px; 
+        bottom: -50px;
     }
 
     /* --- OEUVRE ORIGINALE (Centrage visuel) --- */
@@ -793,6 +796,10 @@ footer img {
     .reponse {
         padding: 0 0.75em;
     }
+
+    .reponse.open {
+        margin: -5.5px auto;
+    }
     
     /* --- FOOTER --- */
 
@@ -852,7 +859,6 @@ footer img {
     }
     
     #fleche { 
-        display: none; /* Cache la flèche animée sur mobile */
     }
 
     /* --- OEUVRE ORIGINALE --- */

@@ -786,7 +786,7 @@ footer img {
     
     /* --- FOOTER --- */
 
-    #liens-footer ul { 
+    #liens-footer ul {
         width: 98%; 
         max-width: 950px;
         margin: 10px -50px; /* Centrage */
@@ -1033,11 +1033,11 @@ footer img {
         flex-direction: column; 
         align-items: center; 
         width: 90%; 
-        margin: 10px auto; 
+        margin: 5px -30px; 
     }
     
     #liens-footer li { 
-        padding: 5px 0; 
+        padding: 5px 0;
         font-size: 12px; 
     }
 }
